@@ -3,6 +3,6 @@ html, body {
 }
 
 .form-container{
-    max-width: 350px;
+    max-width: 100%;
     padding: 1rem;
 }

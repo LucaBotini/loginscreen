@@ -3,40 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Destrói Elenco Network</title>
+    <title>Screen Network</title>
     <link rel="shortcut icon" href="/image/DRTPNG.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="d-flex align-items-center py-4 bg-body-tertiary">
+<body class="py-4 bg-body-tertiary">
 
-  <main class="w-100 m-auto form-container">
+  <main class="form-container">
 
-    <form style="text-align: center;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <form>
+                    <img src="../image/create-upScreen.png" alt="DRT" class="mb-0">
+                    <h3>Stage 1:</h3>
+                    <h1 class="mb-3 fw-normal">Create User</h1>
+                    <!-- user  -->
+                    <div class="form-floating">
+                        <input type="text" class="form-control form-control-sm" id="user" placeholder="User">
+                        <label for="user">User</label>
+                    </div>
+                    <!-- password -->
+                    <div class="form-floating">
+                        <input type="password" id="password" class="form-control form-control-sm mt-1" placeholder="Password">
+                        <label for="password">Password</label>
+                        <button id="btncreate" class="btn btn-outline-success w-100 mt-3">Create</button>
+                    </div>
+                    <p class="mt-3">© screen with information without database.</p>
+                    <div id="alertContainer"></div>
+                </form>
+            </div>
 
-        <img src="../image/DRTPNG.png" alt="DRT" class="mb-0">
-        <h3>Destrói Elenco Network:</h3>
-        <h1 class="mb-3 fw-normal">Create User</h1>
-      <div class="form-floating">
-        <input type="text" class="form-control form-control-sm" id="user"  placeholder="User">
-        <label for="user">User</label>
-      </div>
-      <div class="form-floating">
-        <input type="password" id="password" class="form-control form-control-sm mt-1" placeholder="Password">
-        <label for="password">Password</label>
-        <button id="btncreate" class="btn btn-outline-success w-100 mt-3">Create</button>
-      </div>
-      
-    </form>
-    
-    <!-- <div class="mb-3">
-      <h2 style="text-align: center;">Login Account</h2>
-      <form style="text-align: center; margin-top: 10px;">
-      <input type="text" id="userjoin" name="userjoin" class="form-control form-control-sm" placeholder="User">
-      <input type="password" id="passwordjoin" class="form-control form-control-sm mt-1" name="passwordjoin" placeholder="Password">
-      <button id="btnjoin" class="btn btn-outline-success mt-3">Login</button>
-  </form>
-  </div> -->
+            <div class="col-md-6">
+                <form>
+                      <img src="../image/sign-upScreen.png" alt="DRT" class="mb-0">
+                      <h3>Stage 2:</h3>
+                      <h1 class="mb-3 fw-normal">Login Account</h1>
+                  <div class="form-floating">
+                      <input type="text" id="userjoin" name="userjoin" class="form-control form-control-sm" placeholder="User">
+                      <label for="userjoin">User</label>
+                  </div>
+                  <div class="form-floating">
+                    <input type="password" id="passwordjoin" class="form-control form-control-sm mt-1" name="passwordjoin" placeholder="Password">
+                    <label for="passwordjoin">Password</label>
+                    <button id="btnjoin" class="btn btn-outline-success mt-3 w-100">Login</button>
+                  </div>
+                    <div id="alertContainersign"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="theme">
+      <button class="btn btn-light fixed-bottom" id="btntheme">Theme Light</button>
+    </div>
+</main>
   </main>
     <script src="/admin/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
