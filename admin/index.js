@@ -113,11 +113,26 @@ btnJoin.addEventListener('click', (event) => {
 
 });
 
+function trocarTema() {
+  const htmlElement = document.getElementById('html');
+  const temaAtual = htmlElement.getAttribute('data-bs-theme');
+
+  if (temaAtual === 'dark') {
+    htmlElement.setAttribute('data-bs-theme', 'light');
+    btnTheme.setAttribute('class', 'btn btn-dark fixed-bottom')
+    btnTheme.innerHTML = 'Theme Dark'
+  } else {
+    htmlElement.setAttribute('data-bs-theme', 'dark');
+    btnTheme.setAttribute('class', 'btn btn-light fixed-bottom')
+    btnTheme.innerHTML = 'Theme Light'
+  }
+}
 
 const btnTheme = document.getElementById('btntheme')
-btnTheme.addEventListener('click', (event) =>{
-  event.defaultPrevented();
-
-//adicionar theme dark light
+btnTheme.addEventListener('click', (event) => {
+  event.preventDefault();
+  trocarTema();
+  
+  
 
 })
